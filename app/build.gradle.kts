@@ -1,4 +1,5 @@
 plugins {
+    kotlin("kapt")
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
 }
@@ -71,13 +72,7 @@ dependencies {
     implementation("androidx.room:room-runtime:2.6.1")
     annotationProcessor("androidx.room:room-compiler:2.6.1")
 
-
-
-    //
-// database preference
-   //  implementation("androidx.datastore:datastore-preferences:1.1.1")
-
     // dagger
     implementation("com.google.dagger:hilt-android:2.44")
-    // kapt("com.google.dagger:hilt-android-compiler:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
 }
